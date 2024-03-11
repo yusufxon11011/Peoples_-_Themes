@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pupil Scores</title>
+</head>
+<body>
+    <h1>Pupil Scores for ID: {{ id }}</h1>
+    <ul>
+        {% for subject, score in scores.items %}
+            <li>{{ subject }}: {{ score }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

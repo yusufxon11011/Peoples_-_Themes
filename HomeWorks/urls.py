@@ -17,12 +17,15 @@ Including another URLconf
 
 from django.urls import path, include
 from django.conf.urls.i18n import i18n_patterns
+from django.contrib import admin
 
 urlpatterns = [
     path('weekdays/', include('weekdays.urls')),
 ]
 
 urlpatterns += i18n_patterns(
-    # localized paths here
     path('weekdays/', include('weekdays.urls')),
+    path('admin/', admin.site.urls),
+    path('themes/', include('Themes.urls')),
+    path('pupils/', include('Peoples.urls')),
 )
